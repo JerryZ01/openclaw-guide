@@ -1,0 +1,53 @@
+{
+  "gateway": {
+    "port": 16784,
+    "bind": "0.0.0.0",
+    "auth": {
+      "token": "your-secure-token-change-this"
+    }
+  },
+  "channels": {
+    "whatsapp": {
+      "enabled": true,
+      "allowFrom": ["*"]
+    },
+    "telegram": {
+      "enabled": false,
+      "botToken": "YOUR_BOT_TOKEN"
+    },
+    "feishu": {
+      "enabled": false,
+      "appId": "cli_xxx",
+      "appSecret": "xxx",
+      "verificationToken": "xxx"
+    },
+    "wecom": {
+      "enabled": false,
+      "corpId": "wwxxx",
+      "corpSecret": "xxx",
+      "agentId": 1000001,
+      "token": "xxx",
+      "encodingAesKey": "xxx"
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "alibaba-cloud/MiniMax-M2.5"
+      },
+      "thinking": false,
+      "maxTokens": 8192
+    }
+  },
+  "security": {
+    "allowList": {},
+    "blockList": {}
+  },
+  "logging": {
+    "level": "info",
+    "rotation": {
+      "maxFiles": 7,
+      "maxSize": "10mb"
+    }
+  }
+}

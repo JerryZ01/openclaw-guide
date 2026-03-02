@@ -1,0 +1,34 @@
+{
+  "gateway": {
+    "port": 19001,
+    "bind": "127.0.0.1",
+    "auth": {
+      "token": "dev-token"
+    }
+  },
+  "channels": {
+    "whatsapp": {
+      "enabled": true,
+      "allowFrom": ["*"]
+    },
+    "telegram": {
+      "enabled": true
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "alibaba-cloud/MiniMax-M2.5"
+      },
+      "thinking": true,
+      "maxTokens": 4096
+    }
+  },
+  "logging": {
+    "level": "debug"
+  },
+  "dev": {
+    "autoReload": true,
+    "verbose": true
+  }
+}
